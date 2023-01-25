@@ -1,1 +1,353 @@
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
 
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+/*--------------------*/
+body {
+    background-color: #191a1e;
+    color: #fff;
+}
+
+/* ОГРАНИЧЕНИЕ КОНТЕНТА ПО ШИРИНЕ [шапка] */
+.header__container {
+    max-width: 966px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+
+/* ОГРАНИЧЕНИЕ КОНТЕНТА ПО ШИРИНЕ  [тело] */
+main {
+    max-width: 576px;
+    margin: 0px auto;
+    padding: 0px 15px;
+    margin-top: 80px;
+}
+
+
+/* ==============HEADER============= */
+
+.header__container {
+    display: flex;
+    min-height: 62px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu__item {
+    flex: 1 1 auto;
+    margin: 0px 40px 0px 0px;
+}
+
+.menu__list {
+    display: flex;
+    color: #fff;
+    font-weight: 700;
+    font-family: "JetBrains Mono";
+}
+
+.header__logo-img {
+    width: 20px;
+    height: 20px;
+}
+
+.header__logo-text {
+    font-family: "JetBrains Mono";
+    font-size: 18px;
+    padding-left: 9px;
+    color: #fff;
+    align-items: center;
+}
+
+.container {
+    position: fixed;
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.menu__list a {
+    display: flex;
+    color: #fff;
+    font-family: "JetBrains Mono";
+}
+
+.menu__list a:hover {
+    text-decoration: underline;
+}
+
+.header__logo-img:hover {
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 600ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 600ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 600ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+
+    animation-name: spin;
+    animation-duration: 600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@-ms-keyframes spin {
+    from {
+        -ms-transform: rotate(0deg);
+    }
+
+    to {
+        -ms-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* THEMES */
+.material-icons {
+    color: #fff;
+}
+
+/* ========LIGHT-THEME======== */
+html.dark, .dark body {
+    font-size: 12px;
+    background: #f0e7db;
+    color: #000;
+}
+
+
+/* color of icon */
+.dark .material-icons {
+    color: #000;
+}
+
+/* color of menu in header */
+.dark .menu__item a {
+    color: #000;
+}
+
+/* logo color */
+.dark .header__logo-text {
+    color: #000;
+}
+
+.dark .header__logo-img {
+    color: #000;
+}
+
+.dark .hello-world__text {
+background: #f5f0e8;
+}
+
+/* button about-block */
+.dark .about__button a {
+    background-color: #48d1bf;
+}
+
+/* button bio-block */
+.dark .bio__button a {
+    background-color: #48d1bf;
+}
+
+.dark .menu__item {
+    font-size: 14px;
+}
+
+.themetoggle span {
+    padding: 7px 7px;
+}
+
+
+/* button links-block */
+.dark .links__button a {
+    background-color: #48d1bf;
+}
+
+/* links in links-block */
+.dark .links__links a { 
+    color: #197260;
+}
+
+.dark .links__links a:hover { 
+    background-color: #a4e2d9;
+}
+
+/* АДАПТИВ ПОД СМЕНУ ТЕМЫ */
+@media (max-width: 421.98px) {
+    .header__logo-img {
+        position: absolute;
+        top: -100%;
+    }
+}
+
+.dark .themetoggle {
+    background-color: #e0d530;
+}
+
+.dark .themetoggle:hover {
+    background-color: #beb428;
+    transition: background-color 0.3s ease 0s;
+}
+
+/*  */
+.themetoggle {
+    background-color: #805ad5;
+    border-radius: 5px;
+    padding: 2px 2px;
+}
+.themetoggle:hover {
+    background-color: #6142a3;
+    transition: background-color 0.3s ease 0s;
+}
+
+.menu__item:nth-child(3) {
+    text-decoration: underline;
+}
+
+.workspace__title {
+    display: flex;
+    align-items: center;
+    font-family: "JetBrains Mono";
+    text-decoration: 5px underline;
+    font-size: 20px;
+}
+
+.workspace__item {
+    font-family: Ubuntu;
+    list-style: disc;
+    margin-left: 30px;
+    font-size: 17px;
+    line-height: 55px;
+
+}
+
+.dark .workspace__item {
+    font-size: 17px;
+}
+
+/* ======АДАПТИВ======= */
+@media (max-width: 417.98px) {
+    .header__logo-text {
+        display: none;
+    }
+}

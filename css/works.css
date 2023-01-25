@@ -112,6 +112,7 @@ main {
     padding: 0px 15px;
     margin-top: 80px;
 }
+
 /*--------------------*/
 /* ==============HEADER============= */
 
@@ -232,7 +233,8 @@ main {
 }
 
 /* ========LIGHT-THEME======== */
-html.dark, .dark body {
+html.dark,
+.dark body {
     font-size: 12px;
     background: #f0e7db;
     color: #000;
@@ -259,7 +261,7 @@ html.dark, .dark body {
 }
 
 .dark .hello-world__text {
-background: #f5f0e8;
+    background: #f5f0e8;
 }
 
 /* button about-block */
@@ -287,11 +289,11 @@ background: #f5f0e8;
 }
 
 /* links in links-block */
-.dark .links__links a { 
+.dark .links__links a {
     color: #197260;
 }
 
-.dark .links__links a:hover { 
+.dark .links__links a:hover {
     background-color: #a4e2d9;
 }
 
@@ -318,6 +320,7 @@ background: #f5f0e8;
     border-radius: 5px;
     padding: 2px 2px;
 }
+
 .themetoggle:hover {
     background-color: #6142a3;
     transition: background-color 0.3s ease 0s;
@@ -366,8 +369,16 @@ background: #f5f0e8;
 .dev__card2 p {
     font-family: Ubuntu;
     margin-top: 6px;
-    text-align: center;
+    /* text-align: center; */
     color: #fff;
+}
+
+.dev__card1 img:hover {
+    opacity: .5;
+}
+
+.dev__card2 img:hover {
+    opacity: .5;
 }
 
 .dark .dev__card1 p {
@@ -378,4 +389,38 @@ background: #f5f0e8;
 .dark .dev__card2 p {
     color: #000;
     font-size: 14px;
+}
+
+/* =====АДАПТИВ===== */
+@media (max-width: 483.98px) {
+    .header__logo-text {
+        display: none;
+    }
+
+    .header__logo-img {
+        display: none;
+    }
+}
+
+@media (max-width: 459.98px) {
+    .dev__cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dev__card2 {
+        margin-top: 20px;
+    }
+
+    .dev__card1 a {
+        display: flex;
+        align-items: center;
+    }
+    .dev__card2 a {
+        display: flex;
+        align-items: center;
+    }
+    .dev__card2 p {
+        margin-left: 5px;
+    }
 }
