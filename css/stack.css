@@ -145,8 +145,8 @@ main {
 
 .container {
     position: fixed;
-    backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
     width: 100%;
     top: 0;
     left: 0;
