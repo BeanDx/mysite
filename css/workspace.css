@@ -94,13 +94,23 @@ body {
     color: #fff;
 }
 
-/* ОГРАНИЧЕНИЕ КОНТЕНТА ПО ШИРИНЕ [шапка] */
 .header__container {
-    max-width: 966px;
+    /* max-width: 966px; */
     margin: 0px auto;
     padding: 0px 15px;
 }
 
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__logo-text  {
+    /* display: flex;
+    align-items: center; */
+    margin-top: 4px;
+}
 /* ОГРАНИЧЕНИЕ КОНТЕНТА ПО ШИРИНЕ  [тело] */
 main {
     max-width: 576px;
@@ -111,8 +121,12 @@ main {
 
 
 /* ==============HEADER============= */
+a.logo {
+    display: flex;
+}
 
-.header__container {
+
+.header {
     display: flex;
     min-height: 62px;
     align-items: center;
@@ -131,7 +145,7 @@ main {
     font-family: "JetBrains Mono";
 }
 
-.header__logo-img {
+.logo img {
     width: 20px;
     height: 20px;
 }
@@ -144,7 +158,16 @@ main {
     align-items: center;
 }
 
-.container {
+/* .container {
+    position: fixed;
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+    width: 100%;
+    top: 0;
+    left: 0;
+} */
+
+.header {
     position: fixed;
     -webkit-backdrop-filter: blur(7px);
     backdrop-filter: blur(7px);
@@ -163,7 +186,7 @@ main {
     text-decoration: underline;
 }
 
-.header__logo-img:hover {
+.logo img:hover {
     -webkit-animation-name: spin;
     -webkit-animation-duration: 600ms;
     -webkit-animation-iteration-count: infinite;
@@ -222,6 +245,12 @@ main {
         transform: rotate(360deg);
     }
 }
+
+/* THEMES */
+.material-icons {
+    color: #fff;
+}
+
 
 /* THEMES */
 .material-icons {
@@ -349,5 +378,129 @@ background: #f5f0e8;
 @media (max-width: 417.98px) {
     .header__logo-text {
         display: none;
+    }
+}
+
+/* ========BURGER-MENU========== */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__burger-btn {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.header__burger-btn span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    left: 5px;
+    transition: transform .5s, opacity .5s, background-color .5s;
+}
+
+.dark .header__burger-btn span {
+    background-color: #000;
+}
+
+.header__burger-btn span:nth-child(1) {
+    transform: translateY(-10px);
+}
+
+.header__burger-btn span:nth-child(3) {
+    transform: translateY(10px);
+}
+
+.header.open .header__burger-btn span {
+    background-color: white;
+}
+
+.header.open .header__burger-btn span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.header.open .header__burger-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.header.open .header__burger-btn span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.logo {
+    display: block;
+}
+
+.logo__img {
+    width: 200px;
+}
+
+.menu__list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.menu__link {
+    font-size: 16px;
+}
+
+@media (max-width: 397.98px) {
+    .header__burger-btn {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        left: -350px;
+        top: 0;
+        width: 350px;
+        background-color: rgb(109, 115, 121); /* blueviolet */
+        /* padding: 75px 20px 20px 20px; */
+        padding-top: 20px;
+        padding-bottom: 20px;
+        transition: transform .5s;
+    }
+    .dark .menu {
+        background-color: rgb(147, 185, 180);
+    }
+    .menu__list {
+        display: block;
+    }
+    .menu__link {
+        color: white;
+        font-size: 18px;
+        display: block;
+        padding: 10px 0;
+    }
+    .menu__item {
+        display: flex;
+        justify-content: center;
+        line-height: 25px;
+        font-size: 17px;
+    }
+    .dark .menu__item {
+        font-size: 17px;
+    }
+    .logo img {
+        width: 35px;
+        height: 35px;
+    }
+    .header.open .menu {
+        transform: translateX(100%);
     }
 }
