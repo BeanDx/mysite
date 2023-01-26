@@ -16,13 +16,16 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="container">
-            <div class="header__container">
-                <a href="./index.html">
-                    <img class="header__logo-img" src="./img/header/logo-dark.webp" alt="logo">
-                    <span class="header__logo-text">BeanD</span>
-                </a>
+    <header class="header">
+        <div class="header header__container">
+            <button class="header__burger-btn" id="burger">
+                <span></span><span></span><span></span>
+            </button>
+            <a href="./index.html" class="logo">
+                <img src="./img/header/logo-dark.webp" alt="logo">
+                <span class="header__logo-text">BeanD</span>
+            </a>
+            <nav class="menu">
                 <ul class="menu__list">
                     <li class="menu__item">
                         <a href="./stack.html">Stack</a>
@@ -34,11 +37,12 @@
                         <a href="./workspace.html">Workspace</a>
                     </li>
                 </ul>
-                <a class="themetoggle" href="#">
-                    <span class="material-icons">wb_sunny</span>
-                </a>
-            </div>
+            </nav>
+            <a class="themetoggle" href="#">
+                <span class="material-icons">wb_sunny</span>
+            </a>
         </div>
+    </header>
         <main class="main">
             <section class="dev">
                 <div class="dev__title">⌨️ Development</div>

@@ -16,13 +16,16 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="container">
-            <div class="header__container">
-                <a href="./index.html">
-                    <img class="header__logo-img" src="./img/header/logo-dark.webp" alt="logo">
-                    <span class="header__logo-text">BeanD</span>
-                </a>
+    <header class="header">
+        <div class="header header__container">
+            <button class="header__burger-btn" id="burger">
+                <span></span><span></span><span></span>
+            </button>
+            <a href="./index.html" class="logo">
+                <img src="./img/header/logo-dark.webp" alt="logo">
+                <span class="header__logo-text">BeanD</span>
+            </a>
+            <nav class="menu">
                 <ul class="menu__list">
                     <li class="menu__item">
                         <a href="./stack.html">Stack</a>
@@ -34,54 +37,55 @@
                         <a href="./workspace.html">Workspace</a>
                     </li>
                 </ul>
-                <a class="themetoggle" href="#">
-                    <span class="material-icons">wb_sunny</span>
-                </a>
-            </div>
+            </nav>
+            <a class="themetoggle" href="#">
+                <span class="material-icons">wb_sunny</span>
+            </a>
         </div>
-        <main class="main">
-            <section class="tech-stack">
-                <div class="tech-stack__title">
-                    <img src="./img/stuck-page/hammer30x30.png" alt="hammer">Tech Stack
-                </div>
-                <div class="tech-stack__list">
-                    <ul class="tech-stack__items">
-                        <li class="tech-stack__item">HTML / CSS</li>
-                        <li class="tech-stack__item">JavaScript</li>
-                        <li class="tech-stack__item">Prettier / ESLint</li>
-                        <li class="tech-stack__item">Markdown</li>
-                        <li class="tech-stack__item">Sass / BEM</li>
-                    </ul>
-                </div>
-                <div class="tech-stack__separator"></div>
-            </section>
-            <section class="in-plans">
-                <div class="in-plans__title">
-                    <img src="./img/stuck-page/calendar30x30.png" alt="calendar">In Plans
-                </div>
-                <div class="in-plans__list">
-                    <ul class="in-plans__items">
-                        <li class="in-plans__item">MongoDB</li>
-                        <li class="in-plans__item">MySQL / PostgreSQL</li>
-                        <li class="in-plans__item">Next.js</li>
-                    </ul>
-                </div>
-                <div class="in-plans__separator"></div>
-            </section>
-            <section class="tools">
-                <div class="tools__title">
-                    <img src="./img/stuck-page/tools30x30.png" alt="tools">Tools
-                </div>
-                <div class="tools__list">
-                    <ul class="tools__items">
-                        <li class="tools__item">Git / GitHub</li>
-                        <li class="tools__item">Vim / Neovim</li>
-                        <li class="tools__item">VS Code</li>
-                        <li class="tools__item">Figma / Sketch</li>
-                    </ul>
-                </div>
-            </section>
-        </main>
+    </header>
+    <main class="main">
+        <section class="tech-stack">
+            <div class="tech-stack__title">
+                <img src="./img/stuck-page/hammer30x30.png" alt="hammer">Tech Stack
+            </div>
+            <div class="tech-stack__list">
+                <ul class="tech-stack__items">
+                    <li class="tech-stack__item">HTML / CSS</li>
+                    <li class="tech-stack__item">JavaScript</li>
+                    <li class="tech-stack__item">Prettier / ESLint</li>
+                    <li class="tech-stack__item">Markdown</li>
+                    <li class="tech-stack__item">Sass / BEM</li>
+                </ul>
+            </div>
+            <div class="tech-stack__separator"></div>
+        </section>
+        <section class="in-plans">
+            <div class="in-plans__title">
+                <img src="./img/stuck-page/calendar30x30.png" alt="calendar">In Plans
+            </div>
+            <div class="in-plans__list">
+                <ul class="in-plans__items">
+                    <li class="in-plans__item">MongoDB</li>
+                    <li class="in-plans__item">MySQL / PostgreSQL</li>
+                    <li class="in-plans__item">Next.js</li>
+                </ul>
+            </div>
+            <div class="in-plans__separator"></div>
+        </section>
+        <section class="tools">
+            <div class="tools__title">
+                <img src="./img/stuck-page/tools30x30.png" alt="tools">Tools
+            </div>
+            <div class="tools__list">
+                <ul class="tools__items">
+                    <li class="tools__item">Git / GitHub</li>
+                    <li class="tools__item">Vim / Neovim</li>
+                    <li class="tools__item">VS Code</li>
+                    <li class="tools__item">Figma / Sketch</li>
+                </ul>
+            </div>
+        </section>
+    </main>
     <script src="./js/script.js"></script>
 </body>
 
