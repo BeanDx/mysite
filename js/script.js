@@ -24,3 +24,12 @@ function addDarkClassHTML() {
 }
 addDarkClassHTML();
 // ========================
+// Смена logo при светлой теме
+
+// ========================
+// Бургер меню
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("burger").addEventListener("click", function () {
+        document.querySelector("header").classList.toggle("open")
+    })
+})
